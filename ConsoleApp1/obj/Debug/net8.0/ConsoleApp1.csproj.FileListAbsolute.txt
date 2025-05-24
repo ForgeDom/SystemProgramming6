@@ -1,0 +1,15 @@
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.exe
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.deps.json
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.runtimeconfig.json
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.dll
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.pdb
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfoInputs.cache
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfo.cs
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.sourcelink.json
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.dll
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\refint\ConsoleApp1.dll
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
+E:\VS\RiderProjects\SystemProgramming6\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll
