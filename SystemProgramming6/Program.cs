@@ -5,6 +5,7 @@ class Program
     static int[] data = { 3, 8, 1, 4, 7 };
     static Mutex mutex = new Mutex();
     static bool modificationDone = false;
+    static int maxValue;
 
     static void Main()
     {
@@ -16,7 +17,9 @@ class Program
 
         modifierThread.Join();
         maxFinderThread.Join();
-
+        
+        Console.WriteLine("Модифікований масив: " + string.Join(", ", data));
+        Console.WriteLine("Максимальне значення: " + maxValue);
         Console.WriteLine("Програма завершила роботу.");
     }
 
@@ -49,6 +52,7 @@ class Program
         {
             if (value > max) max = value;
         }
+        maxValue = max;
         Console.WriteLine($"Максимальне значення: {max}");
         mutex.ReleaseMutex();
     }
