@@ -43,7 +43,7 @@ class Program
         }
 
         mutex.WaitOne(); 
-        Console.WriteLine("🔍 Потік 2: пошук максимуму...");
+        Console.WriteLine("Потік 2: пошук максимуму...");
         int max = data[0];
         foreach (int value in data)
         {
