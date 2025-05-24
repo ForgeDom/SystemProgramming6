@@ -5,18 +5,18 @@ class Program
     static void Main()
     {
         bool isNewInstance;
-        
-        using (var mutex = new System.Threading.Mutex(true, "Global\\MyUniqueMutexName", out isNewInstance))
+
+        using (Mutex mutex = new Mutex(true, "Global\\MyUniqueConsoleAppMutex", out isNewInstance))
         {
             if (!isNewInstance)
             {
-                Console.WriteLine("Another instance is already running.");
+                Console.WriteLine("Додаток вже запущено. Друга копія не дозволена.");
                 return;
             }
 
-            Console.WriteLine("This is the only instance running.");
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            Console.WriteLine("Додаток запущено. Натисніть Enter для виходу...");
+            Console.ReadLine(); 
         }
     }
+
 }

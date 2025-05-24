@@ -1,0 +1,9 @@
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\bin\Debug\net8.0\SystemProgramming6.exe
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\SystemProgramming6.GeneratedMSBuildEditorConfig.editorconfig
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\SystemProgramming6.AssemblyInfoInputs.cache
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\SystemProgramming6.AssemblyInfo.cs
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\SystemProgramming6.csproj.CoreCompileInputs.cache
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\SystemProgramming6.sourcelink.json
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\SystemProgramming6.dll
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\refint\SystemProgramming6.dll
+E:\VS\RiderProjects\SystemProgramming6\SystemProgramming6\obj\Debug\net8.0\SystemProgramming6.pdb
