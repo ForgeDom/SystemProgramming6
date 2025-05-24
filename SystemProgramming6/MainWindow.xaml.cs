@@ -13,9 +13,11 @@ namespace SystemProgramming6;
 
 public partial class MainWindow : Window
 {
+    static int[] data = { 3, 8, 1, 4, 7 };
     static Mutex mutex = new Mutex();
-    static bool firstThreadFinished = false;
-    StringBuilder outputBuilder = new StringBuilder();
+    static bool modificationDone = false;
+
+    StringBuilder log = new StringBuilder();
 
     public MainWindow()
     {
@@ -24,61 +26,61 @@ public partial class MainWindow : Window
 
     private void StartThreads_Click(object sender, RoutedEventArgs e)
     {
-        outputBuilder.Clear();
-        OutputTextBox.Text = "";
+        data = new int[] { 3, 8, 1, 4, 7 };
+        modificationDone = false;
+        log.Clear();
+        OutputBox.Text = "";
 
-        firstThreadFinished = false;
+        Thread modifierThread = new Thread(ModifyArray);
+        Thread maxFinderThread = new Thread(FindMax);
 
-        Thread thread1 = new Thread(PrintAscending);
-        Thread thread2 = new Thread(PrintDescending);
-
-        thread1.Start();
-        thread2.Start();
+        modifierThread.Start();
+        maxFinderThread.Start();
     }
 
-    void PrintAscending()
+    void ModifyArray()
     {
         mutex.WaitOne();
-        AppendText("Перший потік: Зростаючі числа:");
+        Append("Потік 1: модифікація масиву...");
 
-        for (int i = 0; i <= 20; i++)
+        for (int i = 0; i < data.Length; i++)
         {
-            AppendText(i + " ");
+            data[i] += 5;
+            Append($"data[{i}] = {data[i]}");
             Thread.Sleep(100);
         }
 
-        AppendText("\nПерший потік завершено.");
-        firstThreadFinished = true;
+        Append("Модифікація завершена");
+        modificationDone = true;
         mutex.ReleaseMutex();
     }
 
-    void PrintDescending()
+    void FindMax()
     {
-        while (!firstThreadFinished)
+        while (!modificationDone)
         {
             Thread.Sleep(50);
         }
 
         mutex.WaitOne();
-        AppendText("\nДругий потік: Спадні числа:");
-
-        for (int i = 10; i >= 0; i--)
+        Append("Потік 2: пошук максимуму...");
+        int max = data[0];
+        foreach (int value in data)
         {
-            AppendText(i + " ");
-            Thread.Sleep(100);
+            if (value > max) max = value;
         }
 
-        AppendText("\nДругий потік завершено.");
+        Append($"Максимальне значення: {max}");
         mutex.ReleaseMutex();
     }
 
-    void AppendText(string text)
+    void Append(string message)
     {
         Dispatcher.Invoke(() =>
         {
-            outputBuilder.AppendLine(text);
-            OutputTextBox.Text = outputBuilder.ToString();
-            OutputTextBox.ScrollToEnd();
+            log.AppendLine(message);
+            OutputBox.Text = log.ToString();
+            OutputBox.ScrollToEnd();
         });
     }
 }
